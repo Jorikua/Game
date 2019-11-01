@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.game.welcome.WelcomeFragment"
+        android:label="WelcomeFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welcomeFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/fade_enter"
+            app:exitAnim="@anim/fade_exit"
+            app:popEnterAnim="@anim/fade_enter"
+            app:popExitAnim="@anim/fade_exit">
+            <argument
+                android:name="move"
+                app:argType="com.example.game.model.Move" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="com.example.game.game.GameFragment"
+        android:label="GameFragment"
+        tools:layout="@layout/fragment_game" >
+        <argument
+            android:name="move"
+            app:argType="com.example.game.model.Move" />
+    </fragment>
+</navigation>

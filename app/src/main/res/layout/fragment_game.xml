@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/banner"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvTurn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/o_turn" />
+
+    <com.example.game.widget.DividerGridLayout
+        android:id="@+id/gameGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:columnCount="3"
+        app:layout_constraintBottom_toTopOf="@id/tvTurn"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57"
+        app:rowCount="3">
+
+        <!--First row-->
+        <ImageView
+            android:id="@+id/image_1"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_o_mark" />
+
+        <ImageView
+            android:id="@+id/image_2"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_x_mark" />
+
+        <ImageView
+            android:id="@+id/image_3"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_o_mark" />
+        <!--First row-->
+
+        <!--Second row-->
+        <ImageView
+            android:id="@+id/image_4"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_x_mark" />
+
+        <ImageView
+            android:id="@+id/image_5"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_x_mark" />
+
+        <ImageView
+            android:id="@+id/image_6"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_o_mark" />
+        <!--Second row-->
+
+        <!--Third row-->
+        <ImageView
+            android:id="@+id/image_7"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_x_mark" />
+
+        <ImageView
+            android:id="@+id/image_8"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_o_mark" />
+
+        <ImageView
+            android:id="@+id/image_9"
+            style="@style/TicToeImageView"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1"
+            tools:src="@drawable/ic_x_mark" />
+        <!--Third row-->
+
+    </com.example.game.widget.DividerGridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

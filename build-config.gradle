@@ -1,0 +1,26 @@
+android {
+  buildTypes {
+    def X_URL = '"http://d.michd.me/aa-lab/x_mark.png"'
+    def O_URL = '"http://d.michd.me/aa-lab/o_mark.png"'
+
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+      buildConfigField "String", "X_URL", X_URL
+      buildConfigField "String", "O_URL", O_URL
+    }
+
+    debug {
+      buildConfigField "String", "X_URL", X_URL
+      buildConfigField "String", "O_URL", O_URL
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  kotlinOptions {
+    jvmTarget = "1.8"
+  }
+}
