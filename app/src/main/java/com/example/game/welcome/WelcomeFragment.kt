@@ -28,7 +28,6 @@ class WelcomeFragment : Fragment(){
       navigateToGame(Move.X)
     }
 
-
     btnStartO.setOnClickListener {
       navigateToGame(Move.O)
     }

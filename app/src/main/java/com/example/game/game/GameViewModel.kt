@@ -48,22 +48,22 @@ class GameViewModel: ViewModel() {
   private fun checkForResult(row: Int, column: Int, move: Move): GameFragment.Result {
     ++commonCount
 
-    val player = if (move == Move.X) GameFragment.Result.X else GameFragment.Result.O
-    rows[row] += player.value
-    columns[column] += player.value
+    val result = if (move == Move.X) GameFragment.Result.X else GameFragment.Result.O
+    rows[row] += result.value
+    columns[column] += result.value
 
     if (row == column) {
-      dc1 += player.value
+      dc1 += result.value
     }
     if (column == numberOfColumns - row - 1) {
-      dc2 += player.value
+      dc2 += result.value
     }
     if (abs(rows[row]) == numberOfColumns
       || abs(columns[column]) == numberOfColumns
       || abs(dc1) == numberOfColumns
       || abs(dc2) == numberOfColumns
     ) {
-      return player
+      return result
     }
 
     if (commonCount == totalCells) {
