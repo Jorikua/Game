@@ -7,6 +7,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import androidx.core.view.forEachIndexed
 import androidx.gridlayout.widget.GridLayout
+import com.example.game.extensions.px
 
 
 class DividerGridLayout @JvmOverloads constructor(
@@ -21,7 +22,7 @@ class DividerGridLayout @JvmOverloads constructor(
     with(paint) {
       color = Color.BLACK
       style = Paint.Style.STROKE
-      strokeWidth = 20f
+      strokeWidth = 5.px
     }
   }
 
